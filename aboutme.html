@@ -10,69 +10,127 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
-	<title>Irmarie-Fraticelli-Rodriguez</title>
+	<title>About Irmarie</title>
 </head>
 
 <body><div class="page">
 	<header>
-		<a class="skip" href="#main">Skip to Main Content</a>
+		<a tabindex="1" class="skip" href="#main">Skip to Main Content</a>
 		<nav>
-			<div><a href="index.html">Home</a></div>
+			<div><a tabindex="2" href="index.html">Home</a></div>
 			<div><a class="inactiveLink" href="aboutme.html">About Me</a></div>
-			<div><a href='archivescas.html'>Archives & CAS</a></div>
-			<div><a href='ux.html'>UX Research</a></div>
-			<div><a href='publications.html'>Publications & Conferences</a></div>
+			<div><a tabindex="3" href='archivescas.html'>Archives & CAS</a></div>
+			<div><a tabindex="4" href='ux.html'>UX Research</a></div>
 		</nav>
 	</header>	
 	
 	<main id="main">
-        <p>
-			Aug. 2019-May. 2021 
-			University of Michigan, Ann Arbor			     
-			School of Information, Master of Science in Information
-			Digital Curation
-			UMSI Achievement Fellowship, SAA/ARL Mosaic Fellowship,ALA Spectrum Scholar
 		
-		</p>
-		<p>
-			Aug. 2017-May. 2019		
-			University of Puerto Rico, Río Piedras Campus		
-			Masters in Arts: Cultural Management and Administration
-		    *Degree not conferred
-		</p>
-		<p>
-			Aug. 2011-Jun. 2017		
-			University of Puerto Rico, Río Piedras Campus			
-			Bachelor of Arts: Spanish Studies, American History
-		</p>
+		<div class="text">
+		<h1 tabindex="6">Irmarie-Fraticelli-Rodriguez</h1>
+		
+		</div>
+
+		<div class="photo">
+			<img src="images/irmaphoto.jpg" alt="A selfie of Irmarie-Fraticelli-Rodriguez">
+		</div>	
+
+		<p>irmafraticelli412@gmail.com</p>
+
+		<h2 tabindex="7">Education</h2>
+		
+		<div class="flexh">
+		<div class="flip-card">
+			<div class="inner">
+				<div class="front"> 
+					<img src="images/umsi.png" alt="University of Michigan School of Information logo.">
+				</div>
+				<div class="back">
+					<h3 tabindex="8">Graduate Studies at University of Michigan School of Information</h3>
+					<h4 tabindex="9">MSI, Areas of emphasis</h4>
+					<ul>
+						<li>Digital Curation</li>
+					</ul>
+					<h4 tabindex="10">Awards</h4>
+					<ul>
+						<li>UMSI Achievement Fellowship</li>
+						<li>SAA/ARL Mosaic Fellowship</li>
+						<li>ALA Spectrum Scholar</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
 		<div class="flip-card">
 			<div class="inner">
-			  <div class="front">
-				<p>
-					<h1>Contact Me!</h1>
-				</p>
-					<img src="images/irmaphoto.jpg" alt="A selfie of Irmarie-Fraticelli-Rodriguez">
-			  </div>
-			  <div class="back">
-				  <form action ="">
-
-				  </form>
-				<h1>John Doe</h1>
-				<p>Architect & Engineer</p>
-				<p>We love that guy</p>
-			  </div>
+				<div class="front"> 
+					<img src="images/escudo-rio-piedras.png" alt="University of Puerto Rico Rio Piedras Campus.">
+				</div>
+				<div class="back">
+					<h3 tabindex="11"> Graduate Studies at University of Puerto Rico Rio Piedras Campus</h3>
+					<h4 tabindex="12">MA, Areas of emphasis</h4>
+					<ul>
+						<li>Cultural Heritage Administration</li>
+					</ul>
+					<h4 tabindex="13">Awards</h4>
+					<ul>
+						<li>Research Assistant Scholarship</li>
+					</ul>
+				</div>
 			</div>
-		  </div>
-        
+		</div>
 
+		<div class="flip-card">
+			<div class="inner">
+				<div class="front"> 
+					<img src="images/escudo-rio-piedras.png" alt="University of Puerto Rico Rio Piedras Campus.">
+				</div>
+				<div class="back">
+					<h3 tabindex="13">Undergraduate Studies at University of Puerto Rico Rio Piedras Campus</h3>
+					<h4 tabindex="14">BA, Areas of emphasis</h4>
+					<ul>
+						<li>Spanish Literature</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	</main>
-    
-    
+	
+	<div class="contact-form">
+	<h2>Contact me!</h2>
+		<form
+  action="https://formspree.io/f/xzbkjaaw"
+  method="POST"
+	>
+	<label>
+		Your email:
+		<input type="text" name="_replyto">
+	</label>
+	<label>
+		Your message:
+		<textarea name="message"></textarea>
+	</label>
 
+	<!-- your other form fields go here -->
+
+	<button type="submit">Send</button>
+	</form> 
+	</div>
     
 	<footer>
 		<p>Irmarie Frarielli-Rodriguez,2020 - <a href="https://www.linkedin.com/in/irmarie-fraticelli-rodriguez/">Linkdin</a> </p>
 	</footer>
-</div></body>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-38EDGG77Q2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-38EDGG77Q2');
+</script>
+
+</body>
 </html>

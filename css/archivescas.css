@@ -16,6 +16,17 @@ div.projects{
     box-shadow: 3px 3px 8px gray;
 }
 
+div.projects.gif {
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "title"
+    "place"
+    "date"
+    "desc"
+    "link"
+    "gif";
+}
+
 div.projects .project-title{
     grid-area: title ;
 }
@@ -39,15 +50,40 @@ div.projects .project-description{
     grid-area: desc;
 }
 
+div.projects .img{
+    margin: 0.5em;
+    display: block;
+    grid-area: gif;
+    /* align-self: center; */
+    /* width: auto; */
+    /* max-width: 800px; */
+    /* width: 80%; */
+    position: relative;
+}
+
+div.projects .img img{
+    max-width: 90%;
+}
+
 @media screen and (min-width: 850px){
     div.projects{
         /* use extra space to style project boxes */
-        grid-template-columns: 8% 24% 24% 24% 8%;
+        grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: 
         "title title title title title"
         "place place . date date"
         ". desc desc desc ." 
         ". link link link link";
+    }
+
+    div.projects.gif {
+        grid-template-columns: 2fr 1fr 3fr 3fr 3fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "title title title title title title"
+        "gif place place . date date"
+        "gif desc desc desc desc ." 
+        "gif . link link link link";
     }
 }
