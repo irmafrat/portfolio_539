@@ -1,0 +1,285 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Montserrat;
+    perspective: 1000px;
+    background-image: url("../images/paper.jpg");
+    background-attachment:fixed;
+}
+
+div.page{
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* navigation bar*/
+nav{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: beige;
+}
+
+nav>div{
+    display: block;
+    align-self: center;
+}
+
+nav a{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    
+}
+
+nav a:focus{
+    border: 2px solid black;
+}
+
+
+
+  /* skip to main content*/
+  /*Resource: https://css-tricks.com/how-to-create-a-skip-to-content-link/*/
+
+a.skip {
+    display: block;
+    background: white;
+    height: 0px;
+    width: 50%;
+    padding: 0px;
+    margin: auto;
+    /* position: ;  */
+    /* transform: translateY(-200%); */
+    transition: height 0.5s;
+    /* border: 2px solid black; */
+    text-align: center;
+    overflow: hidden;
+}
+
+a.skip:focus { 
+    /* transform: translateY(0%); */
+    height: 1em;
+    padding: 2px;
+    /* border-color: red; */
+}  
+
+
+/* IMAGES */
+
+#irmaphoto{
+    justify-content: center;
+    align-items: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    opacity: 0.5;
+}
+
+
+/* GALLERY */
+@keyframes enterRight {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes enterLeft {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+div.gallery{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.gallery::before{
+    display: block;
+    content: "Experiences and Stuff";
+    font-size: 1.5em;
+    margin: 1em 0 0.5em;
+    text-decoration: underline;
+}
+
+.gallery>div{
+    width: 95%;
+    /* border: 2px solid blue; */
+    background: white;
+    box-shadow: 3px 3px 8px gray;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.gallery>div:nth-child(2n+0){
+    align-self: flex-start;
+    /* position: relative;f */
+    animation: enterLeft 1s ease-in 0s 1 forwards;
+}
+
+.gallery>div:nth-child(2n+1){
+    align-self: flex-end;
+    animation: enterRight 1s ease-in 0s 1 forwards;
+}
+
+.gallery>div:nth-child(2n+0)>img{
+    float: left;
+}
+
+.gallery>div:nth-child(2n+1)>img{
+    float: right;
+}
+
+.content_photo{
+    justify-content: center;
+    align-items: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    opacity: 0.8;
+    margin: 0 1em;
+}
+
+.content_photo:hover{
+    width: 70%;
+}
+
+/* body */
+
+.welcome{
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-top: 3em;
+    background: white;
+    box-shadow: 3px 3px 8px gray;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.welcome h1{
+    font-family: Homemade Apple;
+    margin-bottom: 0;
+}
+
+.welcome p{
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.main-item-objectives{
+    padding: 10px;
+    align-items: center;
+
+}
+
+.main-item-objectives p{
+    /* text-align: inline; */
+}
+
+/* Navigation inactive link */
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+    background-color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* footer */
+
+footer{
+    background-color: beige;
+    padding: 0.5em;
+}
+
+footer p{
+    margin: 2px;
+}
+
+
+@media screen and (min-width: 850px){
+    .gallery>div{
+        width: 40%;
+        margin: 0.5em;
+    }
+
+    div.gallery{
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;  
+        margin-top: 5em; 
+        justify-content: space-around; 
+    }
+
+    div.gallery::before{
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        content: "Experiences and Stuff";
+        font-size: 1.5em;
+        margin: 1em 0 0.5em;
+        text-decoration: underline;
+    }
+    .gallery>div:nth-child(2n+0),.gallery>div:nth-child(2n+1){
+        align-self: center;
+    }
+}
+
+@media print{
+    body{
+        /* background: none; */
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+html {
+    scroll-behavior: auto; /* Removes scroll animation */
+}
+
+a.skip, a.skip:focus {
+    /* remove skip to content animation */
+    height:1em;
+    transition: none;
+}
+
+body {
+    /* stop parallax */
+    background-attachment: initial;
+}
+
+.content_photo:hover{
+    /* remove gallery zoom */
+    width: 40%;
+}
+.gallery>div:nth-child(2n+0),.gallery>div:nth-child(2n+1){
+    /* stop animation */
+    animation: none;
+}
+
+}
